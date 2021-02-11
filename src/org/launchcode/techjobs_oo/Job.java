@@ -34,29 +34,11 @@ public class Job extends JobField {
         hasStarted = true;
     }
 
-    @Override
-    public String toString (){
-
-        if(!hasStarted) return "OOPS! This job does not seem to exist.";
-
-        String JOB = "\nID: " + this.id + "\n";
-        JOB += "Name" + ": " + this.name + "\n";
-        JOB += "Employer" + ": " + this.getEmployer() + "\n";
-        JOB += "Location" + ": " + this.getLocation() + "\n";
-        JOB += "Position Type" + ": " + this.getPositionType() + "\n";
-        JOB += "Core Competency" + ": " + this.getCoreCompetency() + "\n";
-        JOB += "\n";
-        return JOB;
-    }
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
-
-
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
-
-
 
     @Override
     public boolean equals(Object o) {
@@ -66,6 +48,19 @@ public class Job extends JobField {
         return id == job.id && Objects.equals(name, job.name) && Objects.equals(employer, job.employer) && Objects.equals(location, job.location) && Objects.equals(positionType, job.positionType) && Objects.equals(coreCompetency, job.coreCompetency);
     }
 
+    @Override
+    public String toString (){
+
+        if(!hasStarted) return "OOPS! This job does not seem to exist.";
+        String JOB = "\nID: " + this.id + "\n";
+        JOB += "Name" + ": " + this.name + "\n";
+        JOB += "Employer" + ": " + this.getEmployer() + "\n";
+        JOB += "Location" + ": " + this.getLocation() + "\n";
+        JOB += "Position Type" + ": " + this.getPositionType() + "\n";
+        JOB += "Core Competency" + ": " + this.getCoreCompetency() + "\n";
+        JOB += "\n";
+        return JOB;
+    }
     @Override
     public int hashCode() {
         return Objects.hash(id, name, employer, location, positionType, coreCompetency);
