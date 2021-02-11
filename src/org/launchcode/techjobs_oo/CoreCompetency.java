@@ -8,7 +8,9 @@ public class CoreCompetency extends JobField{
     public CoreCompetency(String value) {
         this.value = value;
     }
-
+    public String getValue() {
+        return value;
+    }
     // Custom toString, equals, and hashCode methods:
 
     @Override

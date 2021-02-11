@@ -4,6 +4,8 @@ import java.sql.SQLOutput;
 import java.util.Objects;
 
 public class Job extends JobField {
+    private int id;
+    private static int nextId = 1;
     private String name;
     private Employer employer;
     private Location location;
@@ -19,6 +21,7 @@ public class Job extends JobField {
 
     public Job() {
         id = nextId;
+
         name = "Data not available";
         hasStarted = false;
         nextId++;
@@ -65,7 +68,9 @@ public class Job extends JobField {
     public int hashCode() {
         return Objects.hash(id, name, employer, location, positionType, coreCompetency);
     }
-
+    public int getId() {
+        return id;
+    }
     public String getName() {
         return name;
     }

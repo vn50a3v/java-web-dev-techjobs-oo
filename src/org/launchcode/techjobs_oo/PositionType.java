@@ -7,7 +7,9 @@ public class PositionType extends JobField{
     public PositionType(String value) {
         this.value = value;
     }
-
+    public String getValue() {
+        return value;
+    }
     // TODO: Add a custom toString() method that returns the data stored in 'value'.
 
 
