@@ -5,17 +5,10 @@ import java.util.Objects;
 
 public class Employer  extends JobField{
 
-    private String value;
-    public Employer(String aValue) {
-      //  this();
-        this.value = aValue;
-    }
+    //private String value;
+    public Employer(String Value) {
+           super(Value);
 
-    // Custom toString, equals, and hashCode methods:
-
-    @Override
-    public String toString() {
-        return value;
     }
 
     @Override
@@ -26,22 +19,4 @@ public class Employer  extends JobField{
         return getId() == employer.getId();
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId());
-    }
-
-    // Getters and Setters:
-
-    public int getId() {
-        return id;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
 }

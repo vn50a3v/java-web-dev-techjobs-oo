@@ -21,7 +21,6 @@ public class Job extends JobField {
 
     public Job() {
         id = nextId;
-
         name = "Data not available";
         hasStarted = false;
         nextId++;
@@ -54,7 +53,8 @@ public class Job extends JobField {
     @Override
     public String toString (){
 
-        if(!hasStarted) return "OOPS! This job does not seem to exist.";
+           if(!hasStarted)
+           return "OOPS! This job does not seem to exist.";
         String JOB = "\nID: " + this.id + "\n";
         JOB += "Name" + ": " + this.name + "\n";
         JOB += "Employer" + ": " + this.getEmployer() + "\n";
@@ -66,7 +66,7 @@ public class Job extends JobField {
     }
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, employer, location, positionType, coreCompetency);
+        return Objects.hash(id);
     }
     public int getId() {
         return id;
